@@ -14,5 +14,6 @@ namespace Temporary.Models
         [Column("product_name")]
         [MaxLength(250)]
         public string ProductName { get; set; }
+        
     }
 }

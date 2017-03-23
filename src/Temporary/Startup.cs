@@ -6,7 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Temporary.Repo;
-
+using Temporary.Service.Interface;
+using Temporary.Service.ServiceImplimentation;
 
 namespace Temporary
 {
@@ -40,6 +41,7 @@ namespace Temporary
             services.AddDbContext<testingContext>(c => c.UseSqlServer(_connectionString));
             services.AddScoped<ItestingContext, testingContext>();
             services.AddScoped<IProductRepo, ProductRepo>();
+            services.AddScoped<IProductService, ProductSerivce>();
             services.AddSwaggerGen();
             services.AddMvc();
 

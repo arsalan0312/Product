@@ -6,7 +6,7 @@ namespace Temporary.Dto
     {
         public int ProductId { get; set; }
         [Required]
-        [MaxLength(250)]
+        [MaxLength(2)]
         public string ProductName { get; set; }
     }
 }

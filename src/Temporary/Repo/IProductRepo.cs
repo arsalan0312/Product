@@ -1,11 +1,16 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Temporary.Models;
 
 namespace Temporary.Repo 
 {
     public interface IProductRepo 
     {
-        Task<int> add(Product product);
-        int Add(Product product);
+        Task<int> Add(Product product);
+        void Update(Product product);
+        void Remove(long key);        
+        Product Find(long key);
+     
+        IEnumerable<Product> GetAll();
     }
 }
